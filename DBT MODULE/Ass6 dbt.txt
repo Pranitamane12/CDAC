@@ -1,0 +1,38 @@
+q1.
+
+mysql> SELECT *
+    -> FROM orders
+    -> WHERE odate = '1990-10-03' OR odate = '1990-10-04';
+	
+	mysql> SELECT *
+    -> FROM orders
+    -> WHERE odate IN ('1990-10-03', '1990-10-04');
+	
+	q2.
+	SELECT *
+FROM customers
+WHERE snum IN
+    (SELECT snum
+     FROM salespeople
+     WHERE sname='Peel'
+       OR sname='Motika');
+	
+	
+q3.
+mysql> select * from customers
+    -> where cname like 'a%'
+    -> or cname like 'b%'
+    -> or cname like 'c%'
+    -> or cname like 'd%'
+    -> or cname like 'e%'
+    -> or cname like 'f%'
+    -> or cname like 'g%';
+	
+q4.
+ select * from customers
+    -> where cname like 'c%';
+	
+q5.
+mysql> select * from orders
+    -> where amt is not null;	
+	

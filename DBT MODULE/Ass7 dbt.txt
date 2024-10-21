@@ -1,0 +1,42 @@
+q1.
+
+mysql> select count(onum) total_order
+    -> from orders
+    -> where odate like '1990-10-03';
+	
+q2.
+mysql> select count(city)
+    -> from customers
+    -> where city is not null;
++-------------+
+| count(city) |
++-------------+
+|           7 |
++-------------+
+1 row in set (0.00 sec)
+
+q4.
+mysql> select * from customers
+    -> where cname like 'g%'
+    -> order by cname;
++------+----------+--------+--------+------+
+| Cnum | Cname    | City   | Rating | Snum |
++------+----------+--------+--------+------+
+| 2002 | Giovanni | Rome   |    200 | 1003 |
+| 2004 | Grass    | Berlin |    300 | 1002 |
++------+----------+--------+--------+------+
+2 rows in set (0.02 sec)
+
+q5.
+mysql> select max(rating) 'highest rating'
+    -> from customers;
++----------------+
+| highest rating |
++----------------+
+|            300 |
++----------------+
+1 row in set (0.01 sec)
+
+
+	
+	

@@ -1,0 +1,21 @@
+///Ass4
+q1.
+ select Onum , AMT, Odate from orders;
+ 
+ q2.
+ mysql> SELECT * FROM customers
+    -> where Snum = 1001;
+	
+q3.
+ Select city,sname,Snum,comm from SALESPEOPLE;	
+	
+q4.
+	mysql> SELECT rating,Cname
+    -> From Customers
+    -> Where city = 'San Jose';
++--------+----------+
+| rating | Cname    |
++--------+----------+
+|    200 | Liu      |
+|    300 | Cisneros |
++--------+----------+

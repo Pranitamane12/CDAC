@@ -1,0 +1,90 @@
+Exersize3
+
+suppiler >> suppiler
+
+mysql> desc supp;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| DEPTNO   | char(2)  | YES  |     | NULL    |       |
+| DEPTNAME | char(15) | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+2 rows in set (0.10 sec)
+
+mysql> select * from supp;
++--------+-------------+
+| DEPTNO | DEPTNAME    |
++--------+-------------+
+| 10     | Development |
+| 20     | Training    |
++--------+-------------+
+2 rows in set (0.01 sec)
+
+q1.
+mysql> select concat (ucase(substring(deptname,1,1)), lower(substring(deptname,2))) from supp;
++-----------------------------------------------------------------------+
+| concat (ucase(substring(deptname,1,1)), lower(substring(deptname,2))) |
++-----------------------------------------------------------------------+
+| Development                                                           |
+| Training                                                              |
++-----------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
+q3.
+mysql> select lower(deptname) from supp;
++-----------------+
+| lower(deptname) |
++-----------------+
+| development     |
+| training        |
++-----------------+
+2 rows in set (0.01 sec)
+
+q4.
+mysql> select lpad(deptname,25,' ') from supp;
++---------------------------+
+| lpad(deptname,25,' ')     |
++---------------------------+
+|               Development |
+|                  Training |
++---------------------------+
+2 rows in set (0.08 sec)
+
+q2.
+mysql> select upper(deptname) from supp;
++-----------------+
+| upper(deptname) |
++-----------------+
+| DEVELOPMENT     |
+| TRAINING        |
++-----------------+
+2 rows in set (0.05 sec)
+
+q7.
+
+mysql> select length(deptname) from supp;
++------------------+
+| length(deptname) |
++------------------+
+|               11 |
+|                8 |
++------------------+
+2 rows in set (0.01 sec)
+
+q5.
+mysql> select replace (deptname,'t','p') from supp;
++----------------------------+
+| replace (deptname,'t','p') |
++----------------------------+
+| Developmenp                |
+| Training                   |
++----------------------------+
+
+q10.
+mysql> select dayname(curdate());
++--------------------+
+| dayname(curdate()) |
++--------------------+
+| Monday             |
++--------------------+
+1 row in set (0.01 sec)

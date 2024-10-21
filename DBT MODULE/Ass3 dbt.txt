@@ -1,0 +1,7 @@
+////Ass 3
+
+q1.
+Yess
+
+Q2
+The subdivision of SQL used to insert values into tables is called Data Manipulation Language

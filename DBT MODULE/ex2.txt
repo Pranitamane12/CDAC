@@ -1,0 +1,73 @@
+Exersize 2
+
+q1.
+mysql> select * from  supplier order by city desc;
++------+-------+--------+-----------+
+| S    | Sname | Status | city      |
++------+-------+--------+-----------+
+| s5   | suzi  |     40 | San jones |
+| s2   | bob   |     30 | Paris     |
+| s1   | King  |     10 | London    |
+| s3   | Enna  |     20 | Athens    |
+| s4   | black |     50 | athens    |
++------+-------+--------+-----------+
+
+q2.
+mysql> select * from  parts order by city and pname asc;
++------+-------------+-------------+--------+-----------+
+| P    | Pname       | color       | weight | city      |
++------+-------------+-------------+--------+-----------+
+| p1   | Fridge      | black       |    300 | san jones |
+| p2   | table       | brown       |    700 | Anthens   |
+| p3   | Laptop      | silver      |    400 | London    |
+| p4   | wire cables | red         |   1000 | paris     |
+| p6   | tv          | black       |    900 | san jones |
+| p7   | chair       | olive green |    200 | anthens   |
+| p8   | cloth       | blue        |    100 | london    |
+| p5   | ply sheets  | white       |   1500 | Anthens   |
++------+-------------+-------------+--------+-----------+
+
+q3.
+ 
+mysql> select * from supplier where status between 10 and 20;
++------+-------+--------+---------+
+| S    | Sname | Status | city    |
++------+-------+--------+---------+
+| s1   | King  |     10 | London  |
+| s3   | Enna  |     20 | Anthens |
++------+-------+--------+---------+
+
+q4.
+mysql> select * from parts where weight not between 10 and 15;
++------+-------------+-------------+--------+-----------+
+| P    | Pname       | color       | weight | city      |
++------+-------------+-------------+--------+-----------+
+| p1   | Fridge      | black       |    300 | san jones |
+| p2   | table       | brown       |    700 | Anthens   |
+| p3   | Laptop      | silver      |    400 | London    |
+| p4   | wire cables | red         |   1000 | paris     |
+| p6   | tv          | black       |    900 | san jones |
+| p7   | chair       | olive green |    200 | anthens   |
+| p8   | cloth       | blue        |    100 | london    |
+| p5   | ply sheets  | white       |   1500 | Anthens   |
++------+-------------+-------------+--------+-----------+
+
+q5.
+
+mysql> select pname from parts where pname like 's%';
+Empty set (0.00 sec)
+
+q6.
+
+mysql> select * from supplier where city like 'l%';
++------+-------+--------+--------+
+| S    | Sname | Status | city   |
++------+-------+--------+--------+
+| s1   | King  |     10 | London |
++------+-------+--------+--------+
+
+q7.
+mysql> select * from projects where jname like '__n%';
+Empty set (0.00 sec)
+
+

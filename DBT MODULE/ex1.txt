@@ -1,0 +1,165 @@
+exersize1
+
+q1.
+ EMPNO CHAR(4) 
+ EMPNAME CHAR(20) 
+ BASIC FLOAT 
+ DEPTNO CHAR(2) 
+ DEPTHEAD CHAR(4)
+
+mysql>  create database cdacmumbai;
+mysql> create table SDEPT (DEPTNO CHAR(2),DEPTNAME CHAR(15));
+
+mysql> desc SEMP;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| EMPNO    | char(4)  | YES  |     | NULL    |       |
+| EMPNAME  | char(20) | YES  |     | NULL    |       |
+| BASIC    | float    | YES  |     | NULL    |       |
+| DEPTNO   | char(2)  | YES  |     | NULL    |       |
+| DEPTHEAD | char(4)  | YES  |     | NULL    |       |
+
+q2
+DEPTNO CHAR(2) 
+ DEPTNAME CHAR(15) 
+
+mysql> create table (DEPTNO CHAR(2),DEPTNAME CHAR(15));
+
+mysql> desc sdept;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| DEPTNO   | char(2)  | YES  |     | NULL    |       |
+| DEPTNAME | char(15) | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+
+q3.
+mysql> insert into SDEPT values('10', 'Development'),('20', 'Training');
+
+mysql> select * from SDEPT;
++--------+-------------+
+| DEPTNO | DEPTNAME    |
++--------+-------------+
+| 10     | Development |
+| 20     | Training    |
++--------+-------------+
+
+q4.
+mysql> insert into SEMP values('0001', 'SUNIL', 6000,null, '10'),('0002', 'HIREN', 8000, '20',null),('0003', 'ALI', 4000, '10', '0001'),('0004', 'GEORGE', 6000,null, '0002');
+
+select * from SEMP;
++-------+---------+-------+--------+----------+
+| EMPNO | EMPNAME | BASIC | DEPTNO | DEPTHEAD |
++-------+---------+-------+--------+----------+
+| 0001  | SUNIL   |  6000 | NULL   | 10       |
+| 0002  | HIREN   |  8000 | 20     | NULL     |
+| 0003  | ALI     |  4000 | 10     | 0001     |
+| 0004  | GEORGE  |  6000 | NULL   | 0002     |
++-------+---------+-------+--------+----------+
+
+q5.
+mysql> select * from supplier;
++------+-------+--------+-----------+
+| S    | Sname | Status | city      |
++------+-------+--------+-----------+
+| s1   | King  |     10 | London    |
+| s2   | bob   |     30 | Paris     |
+| s3   | Enna  |     20 | Athens    |
+| s4   | black |     50 | athens    |
+| s5   | suzi  |     40 | San jones |
++------+-------+--------+-----------+
+
+q6.
+mysql> select s,Sname from supplier;
++------+-------+
+| s    | Sname |
++------+-------+
+| s1   | King  |
+| s2   | bob   |
+| s3   | Enna  |
+| s4   | black |
+| s5   | suzi  |
++------+-------+
+ 
+q7.
+mysql> select pname , color from parts where city = 'london';
++--------+--------+
+| pname  | color  |
++--------+--------+
+| Laptop | silver |
+| cloth  | blue   |
++--------+--------+
+
+q8.
+mysql> select * from supplier where city = 'london';
++------+-------+--------+--------+
+| S    | Sname | Status | city   |
++------+-------+--------+--------+
+| s1   | King  |     10 | London |
++------+-------+--------+--------+
+
+q9.
+mysql> select * from supplier where (city = 'paris' or city ='anthens');
++------+-------+--------+---------+
+| S    | Sname | Status | city    |
++------+-------+--------+---------+
+| s2   | bob   |     30 | Paris   |
+| s3   | Enna  |     20 | Anthens |
+| s4   | black |     50 | Anthens |
++------+-------+--------+---------+
+
+q11.
+
+mysql> select pname from parts where weight>=12 and weight<=14;
+Empty set (0.00 sec)
+
+q12.
+mysql> select * from supplier where  status>='20';
++------+-------+--------+-----------+
+| S    | Sname | Status | city      |
++------+-------+--------+-----------+
+| s2   | bob   |     30 | Paris     |
+| s3   | Enna  |     20 | Anthens   |
+| s4   | black |     50 | Anthens   |
+| s5   | suzi  |     40 | San jones |
++------+-------+--------+-----------+
+
+q13.
+mysql> select * from supplier where not city ='london';
++------+-------+--------+-----------+
+| S    | Sname | Status | city      |
++------+-------+--------+-----------+
+| s2   | bob   |     30 | Paris     |
+| s3   | Enna  |     20 | Anthens   |
+| s4   | black |     50 | Anthens   |
+| s5   | suzi  |     40 | San jones |
++------+-------+--------+-----------+
+
+q14.
+mysql> select city from supplier ;
++-----------+
+| city      |
++-----------+
+| London    |
+| Paris     |
+| Anthens   |
+| Anthens   |
+| San jones |
++-----------+
+
+q15.
+mysql> select weight , weight*1000 as weight_mg , weight/1000 as weight_kg 
+from parts;
++--------+-----------+-----------+
+| weight | weight_mg | weight_kg |
++--------+-----------+-----------+
+|    300 |    300000 |       0.3 |
+|    700 |    700000 |       0.7 |
+|    400 |    400000 |       0.4 |
+|   1000 |   1000000 |         1 |
+|    900 |    900000 |       0.9 |
+|    200 |    200000 |       0.2 |
+|    100 |    100000 |       0.1 |
+|   1500 |   1500000 |       1.5 |
++--------+-----------+-----------+

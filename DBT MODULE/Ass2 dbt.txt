@@ -1,0 +1,14 @@
+ Introducing Relational Databases.
+ 
+ q1.
+ ==>> Snum is primary key column in customers table.
+ 
+ q2.
+ ==>>4th column of customers table is rating.
+ 
+ q3.
+ ==>> Another word for Row is 
+ Another word for column is 
+ 
+ q4.
+ ==>> 
