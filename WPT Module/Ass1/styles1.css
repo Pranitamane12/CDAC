@@ -1,0 +1,37 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e7bfea;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: rgb(187, 26, 74);
+    }
+    hr{
+          margin-top:-20px;
+        border-color: black;
+    }
+
+    .profileimg{
+        margin: 0%;
+        float: right;
+        width: 40%;
+    }
+    img{
+     
+        max-width: 150px;
+           height: 180px;
+           border-radius: 50%;
+           margin: right 20px;
+       }
+   
