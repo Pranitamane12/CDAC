@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Choose item name remove:</h3>
+    <select id="dropdown">
+        <option value="1">Pranita</option>
+        <option value="2">Vivek</option>
+        <option value="3">Pratibha</option>
+        <option value="4">Kavita</option>
+        <option value="5">Vishnupant</option>
+    </select>
+    <button onclick="Removeselectedno()">Remove name</button>
+
+    <script>
+        function Removeselectedno() {
+            const dropdown = document.getElementById("dropdown");
+            dropdown.remove(1);
+        }
+    </script>
+</body>
+</html>
